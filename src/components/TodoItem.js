@@ -1,5 +1,6 @@
 import React from 'react';
 
+//function declaration
 function TodoItem() {
     return (
       <div className='todo-item'>
