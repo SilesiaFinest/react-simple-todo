@@ -9,5 +9,5 @@ function TodoItem() {
       </div>
     )
   };
-//////////////
+
 export default TodoItem;
