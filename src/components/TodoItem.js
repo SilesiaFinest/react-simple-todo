@@ -2,6 +2,12 @@ import React from 'react';
 
 //function declaration
 function TodoItem(props) {
+  //text decoration style declared then added conditionally to <p></p>
+    const completedStyle = {
+      fontStyle: 'italic',
+      color: '#cdcdcd',
+      textDecoration: 'line-through'
+    }
     return (
       <div className='todo-item'>
         <input
@@ -11,7 +17,7 @@ function TodoItem(props) {
           //onChange receives event in 1st () it is anonymous function and then it calls handleChange
           // and passes this item's ID so we can identificate where to change .completed value
           onChange={() => props.handleChange(props.item.id)} />
-        <p>{props.item.text}</p>
+        <p style={props.item.completed ? completedStyle : null}>{props.item.text}</p>
       </div>
     )
   };
